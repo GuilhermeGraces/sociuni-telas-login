@@ -1,0 +1,95 @@
+:root {
+  --br: white;
+  --color-text: rgba(255, 255, 255, 0.8);
+  --background: rgba(255, 255, 255, .12);
+  --border-color: rgba(255, 255, 255, .25);
+  --box: rgba(255, 255, 255, .2);
+}
+
+body {
+  margin: 0;
+  min-height: 100vh;
+  background: radial-gradient(ellipse at 75% 0%, #1a2a44, #05080f 70%);
+  color: var(--br);
+  font-family: poppins, sans-serif;
+}
+
+.login-card{
+  max-width: 420px;
+  background: rgba(255, 255, 255, .08);
+  border: 1px solid var(--box);
+  border-radius: 22px;
+  padding: 2rem;
+  box-shadow: 0 20px 60px rgba(255, 255, 255, .1);
+  backdrop-filter: blur(10px);
+}
+
+.input-group-text {
+  background: var(--background);
+  border: 1px solid var(--border-color);
+  color: var(--br);
+}
+
+.form-control{
+  background: var(--background);
+  border: 1px solid var(--border-color);
+  color: var(--br);
+}
+
+.form-control::placeholder{
+  color: var(--color-text);
+}
+
+.form-control:focus {
+  background: rgba(0, 0, 0, 0.12);
+  border-color: rgba(255, 255, 255, .5);
+  box-shadow: none;
+  color: var(--br);
+}
+
+.form-control:-webkit-autofill {
+  -webkit-box-shadow: 0 0 0 1000px #0b1220 inset;
+  -webkit-text-fill-color: var(--br);
+}
+
+.btn{
+  background: var(--background);
+  border: 1px solid var(--border-color);
+  border-radius: 999px;
+  padding: 0.7rem;
+  transition: 0.3s;
+
+  &:hover{
+    transform: translateY(-3px);
+    background: rgba(7, 7, 7, 0.4);
+    border-color: var(--border-color);
+    color: --br;
+    box-shadow: 0 8px 20px var(--box);
+  }
+}
+
+.icon {
+    font-size: 24px;
+    color: #ffffff;
+    text-decoration: none;
+    position: absolute;
+    right: 10px;
+    top: 50%;
+    transform: translateY(-50%);
+}
+
+.icon .bi-eye {
+    display: none;
+}
+
+.icon.is-active .bi-eye {
+    display: block;
+}
+
+.icon.is-active .bi-eye-slash {
+    display: none;
+}
+
+.icon .bi-eye-slash {
+    display: block;
+}
